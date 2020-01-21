@@ -13,7 +13,7 @@ class InitialScrollVC: UIViewController {
     @IBOutlet weak var photoSearch: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var searchQuery = "united" {
+    var searchQuery = "yellow" {
         didSet{
         searchBarQuery(for: searchQuery)
         }
@@ -29,15 +29,13 @@ class InitialScrollVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         photoSearch.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
-
+        searchBarQuery(for: "yellow")
     }
 
-
-func searchBarQuery(for search: String) {
+private func searchBarQuery(for search: String) {
     PicturesAPI.loadPictures(for: search, completion: {[weak self] (result) in
     switch result {
     case .failure( let appError ):
@@ -52,7 +50,6 @@ func searchBarQuery(for search: String) {
 
 extension InitialScrollVC: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    
         searchQuery = photoSearch.text ?? "yellow"
     }
 }
@@ -68,13 +65,9 @@ extension InitialScrollVC: UICollectionViewDataSource{
         }
         let photo = photos[indexPath.row]
         cell.configureCell(for: photo)
-        
         return cell
     }
-    
-    
 }
-
 extension InitialScrollVC: UICollectionViewDelegateFlowLayout{
     
 }

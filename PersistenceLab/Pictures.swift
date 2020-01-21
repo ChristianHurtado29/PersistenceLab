@@ -13,11 +13,10 @@ struct PicHits: Codable{
 }
 
 struct Pictures: Codable{
-    let largeImageUrl: String
+    let largeImageURL: String
     let likes: Int
-    let view: Int
+    let views: Int
     let comments: Int
-    let tags: [String?]
     let downloads: Int
     let user: String
     let previewURL: String

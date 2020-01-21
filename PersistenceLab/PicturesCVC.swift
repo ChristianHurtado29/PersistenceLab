@@ -11,13 +11,18 @@ import ImageKit
 
 class PicturesCVC: UICollectionViewCell {
     
-    @IBOutlet weak var picName: UILabel!
-    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var viewLabel: UILabel!
+    @IBOutlet weak var downloadsLabel: UILabel!
     
     @IBOutlet weak var pictureView: UIImageView!
     
     
     func configureCell(for photo: Pictures){
+        
+        userLabel.text = "User: \(photo.user)"
+        viewLabel.text = "total views \(photo.views.description)"
+        downloadsLabel.text = "Total Downloads: \(photo.downloads.description)"
         
         pictureView.getImage(with: photo.previewURL) { [weak self] (result) in
             switch result {
