@@ -3,29 +3,32 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1346E8FB23D41B7E003F654B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E8FA23D41B7E003F654B /* AppDelegate.swift */; };
 		1346E8FD23D41B7E003F654B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E8FC23D41B7E003F654B /* SceneDelegate.swift */; };
-		1346E8FF23D41B7E003F654B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E8FE23D41B7E003F654B /* ViewController.swift */; };
+		1346E8FF23D41B7E003F654B /* InitialScrollVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E8FE23D41B7E003F654B /* InitialScrollVC.swift */; };
 		1346E90223D41B7E003F654B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1346E90023D41B7E003F654B /* Main.storyboard */; };
 		1346E90423D41B81003F654B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1346E90323D41B81003F654B /* Assets.xcassets */; };
 		1346E90723D41B81003F654B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1346E90523D41B81003F654B /* LaunchScreen.storyboard */; };
 		1346E91023D50670003F654B /* Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E90F23D50670003F654B /* Pictures.swift */; };
+		1346E91323D50BB9003F654B /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1346E91223D50BB9003F654B /* ImageKit */; };
+		1346E91523D50C5A003F654B /* PicturesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E91423D50C5A003F654B /* PicturesAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1346E8F723D41B7E003F654B /* PersistenceLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistenceLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1346E8FA23D41B7E003F654B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1346E8FC23D41B7E003F654B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1346E8FE23D41B7E003F654B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1346E8FE23D41B7E003F654B /* InitialScrollVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialScrollVC.swift; sourceTree = "<group>"; };
 		1346E90123D41B7E003F654B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1346E90323D41B81003F654B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1346E90623D41B81003F654B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1346E90823D41B81003F654B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1346E90F23D50670003F654B /* Pictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pictures.swift; sourceTree = "<group>"; };
+		1346E91423D50C5A003F654B /* PicturesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1346E91323D50BB9003F654B /* ImageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +65,7 @@
 				1346E8FA23D41B7E003F654B /* AppDelegate.swift */,
 				1346E8FC23D41B7E003F654B /* SceneDelegate.swift */,
 				1346E90F23D50670003F654B /* Pictures.swift */,
+				1346E91423D50C5A003F654B /* PicturesAPI.swift */,
 				1346E90E23D41C57003F654B /* Controllers */,
 				1346E90023D41B7E003F654B /* Main.storyboard */,
 				1346E90323D41B81003F654B /* Assets.xcassets */,
@@ -73,7 +78,7 @@
 		1346E90E23D41C57003F654B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1346E8FE23D41B7E003F654B /* ViewController.swift */,
+				1346E8FE23D41B7E003F654B /* InitialScrollVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -94,6 +99,9 @@
 			dependencies = (
 			);
 			name = PersistenceLab;
+			packageProductDependencies = (
+				1346E91223D50BB9003F654B /* ImageKit */,
+			);
 			productName = PersistenceLab;
 			productReference = 1346E8F723D41B7E003F654B /* PersistenceLab.app */;
 			productType = "com.apple.product-type.application";
@@ -122,6 +130,9 @@
 				Base,
 			);
 			mainGroup = 1346E8EE23D41B7E003F654B;
+			packageReferences = (
+				1346E91123D50BB9003F654B /* XCRemoteSwiftPackageReference "ImageKit" */,
+			);
 			productRefGroup = 1346E8F823D41B7E003F654B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -150,7 +161,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1346E91023D50670003F654B /* Pictures.swift in Sources */,
-				1346E8FF23D41B7E003F654B /* ViewController.swift in Sources */,
+				1346E91523D50C5A003F654B /* PicturesAPI.swift in Sources */,
+				1346E8FF23D41B7E003F654B /* InitialScrollVC.swift in Sources */,
 				1346E8FB23D41B7E003F654B /* AppDelegate.swift in Sources */,
 				1346E8FD23D41B7E003F654B /* SceneDelegate.swift in Sources */,
 			);
@@ -350,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1346E91123D50BB9003F654B /* XCRemoteSwiftPackageReference "ImageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alexpaul/ImageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1346E91223D50BB9003F654B /* ImageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1346E91123D50BB9003F654B /* XCRemoteSwiftPackageReference "ImageKit" */;
+			productName = ImageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1346E8EF23D41B7E003F654B /* Project object */;
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class hits: Codable{
+class Hits: Codable{
     let hits: Pictures
 }
 
@@ -18,5 +18,6 @@ class Pictures: Codable{
     let view: Int
     let comments: Int
     let tags: [String?]
+    let downloads: Int
     let user: String
 }
