@@ -12,7 +12,7 @@ import NetworkHelper
 struct PicturesAPI {
     
     static func loadPictures(for searchQuery: String,
-                              completion: @escaping (Result<[Hits], AppError>) -> ()) {
+                              completion: @escaping (Result<[Pictures], AppError>) -> ()) {
             
         let apiKey = "14968421-bdbbdb0f044ae1bfcb38ea89d&q"
         
@@ -33,11 +33,11 @@ struct PicturesAPI {
                     completion(.failure(.networkClientError(appError)))
                 case .success(let data):
                     do {
-                        let searchResults = try JSONDecoder().decode([Hits].self, from: data)
-                        completion(.success(searchResults))
-                        
+                        let searchResults = try JSONDecoder().decode(PicHits.self, from: data)
+                        let picReturns = searchResults.hits
+                        completion(.success(picReturns))
                     } catch {
-                        print("Error")
+                        completion(.failure(.decodingError(error)))
                     }
                 }
             }

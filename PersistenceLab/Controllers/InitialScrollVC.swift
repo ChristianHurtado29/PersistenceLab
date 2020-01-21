@@ -19,7 +19,7 @@ class InitialScrollVC: UIViewController {
         }
     }
     
-    var photos = [Hits](){
+    var photos = [Pictures](){
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -29,6 +29,10 @@ class InitialScrollVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        photoSearch.delegate = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
 
     }
 
@@ -51,4 +55,26 @@ extension InitialScrollVC: UISearchBarDelegate{
     
         searchQuery = photoSearch.text ?? "yellow"
     }
+}
+
+extension InitialScrollVC: UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photosCell", for: indexPath) as? PicturesCVC else {
+            fatalError("Could not find cell")
+        }
+        let photo = photos[indexPath.row]
+        cell.configureCell(for: photo)
+        
+        return cell
+    }
+    
+    
+}
+
+extension InitialScrollVC: UICollectionViewDelegateFlowLayout{
+    
 }

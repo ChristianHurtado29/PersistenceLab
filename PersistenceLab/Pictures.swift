@@ -8,11 +8,11 @@
 
 import Foundation
 
-class Hits: Codable{
-    let hits: Pictures
+struct PicHits: Codable{
+    let hits: [Pictures]
 }
 
-class Pictures: Codable{
+struct Pictures: Codable{
     let largeImageUrl: String
     let likes: Int
     let view: Int
@@ -20,4 +20,5 @@ class Pictures: Codable{
     let tags: [String?]
     let downloads: Int
     let user: String
+    let previewURL: String
 }

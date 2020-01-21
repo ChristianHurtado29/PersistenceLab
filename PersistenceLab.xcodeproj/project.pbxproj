@@ -16,6 +16,7 @@
 		1346E91023D50670003F654B /* Pictures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E90F23D50670003F654B /* Pictures.swift */; };
 		1346E91323D50BB9003F654B /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1346E91223D50BB9003F654B /* ImageKit */; };
 		1346E91523D50C5A003F654B /* PicturesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1346E91423D50C5A003F654B /* PicturesAPI.swift */; };
+		1369383323D685FD0025F73E /* PicturesCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1369383223D685FD0025F73E /* PicturesCVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		1346E90823D41B81003F654B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1346E90F23D50670003F654B /* Pictures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pictures.swift; sourceTree = "<group>"; };
 		1346E91423D50C5A003F654B /* PicturesAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesAPI.swift; sourceTree = "<group>"; };
+		1369383223D685FD0025F73E /* PicturesCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesCVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				1346E8FA23D41B7E003F654B /* AppDelegate.swift */,
 				1346E8FC23D41B7E003F654B /* SceneDelegate.swift */,
 				1346E90F23D50670003F654B /* Pictures.swift */,
+				1369383223D685FD0025F73E /* PicturesCVC.swift */,
 				1346E91423D50C5A003F654B /* PicturesAPI.swift */,
 				1346E90E23D41C57003F654B /* Controllers */,
 				1346E90023D41B7E003F654B /* Main.storyboard */,
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1346E91023D50670003F654B /* Pictures.swift in Sources */,
+				1369383323D685FD0025F73E /* PicturesCVC.swift in Sources */,
 				1346E91523D50C5A003F654B /* PicturesAPI.swift in Sources */,
 				1346E8FF23D41B7E003F654B /* InitialScrollVC.swift in Sources */,
 				1346E8FB23D41B7E003F654B /* AppDelegate.swift in Sources */,
