@@ -16,11 +16,8 @@ class FavesCell: UITableViewCell {
     
     func configureCell(for photo: Pictures){
         userLabel.text = "User: \(photo.user)"
-        userLabel.backgroundColor = .darkGray
-        viewLabel.text = "total views \(photo.views.description)"
-        viewLabel.backgroundColor = .darkGray
-        downloadsLabel.text = "Total Downloads: \(photo.downloads.description)"
-        downloadsLabel.backgroundColor = .darkGray
+        viewLabel.text = "Views: \(photo.views.description)"
+        downloadsLabel.text = "Downloads: \(photo.downloads.description)"
         pictureView.getImage(with: photo.previewURL) { [weak self] (result) in
             switch result {
             case .failure:

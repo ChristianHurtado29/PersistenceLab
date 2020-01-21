@@ -177,7 +177,7 @@
                         <viewLayoutGuide key="safeArea" id="PR3-mo-3mg"/>
                     </view>
                     <navigationItem key="navigationItem" id="zjp-hw-RO0">
-                        <barButtonItem key="rightBarButtonItem" image="heart.fill" catalog="system" id="fUz-Ru-YId">
+                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="fUz-Ru-YId">
                             <connections>
                                 <action selector="favoritesButton:" destination="cZU-G9-G5H" id="Gax-iN-V71"/>
                             </connections>
@@ -193,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z4y-wU-URV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2547.826086956522" y="0.0"/>
+            <point key="canvasLocation" x="3029" y="382"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xXg-mR-bCM">
@@ -239,19 +239,19 @@
                                                         <constraint firstAttribute="width" constant="203" id="5VB-eZ-RWs"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpr-QB-z36">
-                                                    <rect key="frame" x="20" y="0.0" width="183" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="userLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpr-QB-z36">
+                                                    <rect key="frame" x="20" y="0.0" width="183" height="20.5"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="viewsLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pep-Au-mbE">
-                                                    <rect key="frame" x="20" y="29" width="183" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="viewsLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pep-Au-mbE">
+                                                    <rect key="frame" x="20" y="28.5" width="183" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="likesLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdM-HM-q9e">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="likesLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdM-HM-q9e">
                                                     <rect key="frame" x="20" y="58" width="183" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -305,7 +305,7 @@
         <scene sceneID="CaF-qe-EtJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N2Q-7s-dNE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="bbr-0f-tYS"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="magnifyingglass" catalog="system" id="bbr-0f-tYS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3pV-Gm-WJb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -324,7 +324,7 @@
         <scene sceneID="L6s-Ka-YOf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0ek-lP-BN5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ocH-cg-aJa"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="heart.fill" catalog="system" id="ocH-cg-aJa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rBb-6r-t1D">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -343,6 +343,8 @@
     <resources>
         <image name="camera wallpaper" width="1080" height="1920"/>
         <image name="detailedbackforpersistencelab" width="846" height="1456"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="magnifyingglass" catalog="system" width="64" height="56"/>
     </resources>
 </document>
