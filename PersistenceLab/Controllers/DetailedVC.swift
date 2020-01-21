@@ -47,13 +47,12 @@ class DetailedVC: UIViewController {
     
     @IBAction func favoritesButton(_ sender: UIBarButtonItem) {
         
-        guard let favored = photo else{
-            return
-        }
         let currentPhoto = Pictures(largeImageURL: photo!.largeImageURL, likes: photo!.likes, views: photo!.views, comments: photo?.comments, downloads: photo!.downloads, user: photo!.user, previewURL: photo!.previewURL)
         
-    }
-    
-
+        do{
+            try PersistenceHelper.save(photo: currentPhoto)
+        } catch {
+            print("Error saving photo with error \(error)")
+        }
 }
-
+}
