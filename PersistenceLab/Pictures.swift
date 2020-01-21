@@ -16,7 +16,7 @@ struct Pictures: Codable{
     let largeImageURL: String
     let likes: Int
     let views: Int
-    let comments: Int
+    let comments: Int?
     let downloads: Int
     let user: String
     let previewURL: String

@@ -13,7 +13,7 @@ class InitialScrollVC: UIViewController {
     @IBOutlet weak var photoSearch: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var searchQuery = "yellow" {
+    var searchQuery = "blue" {
         didSet{
         searchBarQuery(for: searchQuery)
         }
@@ -32,7 +32,15 @@ class InitialScrollVC: UIViewController {
         photoSearch.delegate = self
         collectionView.delegate = self
         collectionView.dataSource = self
-        searchBarQuery(for: "yellow")
+        searchBarQuery(for: "blue")
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailedVC = segue.destination as? DetailedVC,
+            let indexPath = collectionView.indexPathsForSelectedItems?.first else {
+            fatalError("Could not segue indexPath")
+        }
+        detailedVC.photo = photos[indexPath.row]
     }
 
 private func searchBarQuery(for search: String) {
@@ -50,7 +58,10 @@ private func searchBarQuery(for search: String) {
 
 extension InitialScrollVC: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchQuery = photoSearch.text ?? "yellow"
+        searchQuery = photoSearch.text ?? "blue"
+    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        photoSearch.resignFirstResponder()
     }
 }
 

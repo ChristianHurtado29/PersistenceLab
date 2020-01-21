@@ -21,8 +21,11 @@ class PicturesCVC: UICollectionViewCell {
     func configureCell(for photo: Pictures){
         
         userLabel.text = "User: \(photo.user)"
+        userLabel.backgroundColor = .darkGray
         viewLabel.text = "total views \(photo.views.description)"
+        viewLabel.backgroundColor = .darkGray
         downloadsLabel.text = "Total Downloads: \(photo.downloads.description)"
+        downloadsLabel.backgroundColor = .darkGray
         
         pictureView.getImage(with: photo.previewURL) { [weak self] (result) in
             switch result {
