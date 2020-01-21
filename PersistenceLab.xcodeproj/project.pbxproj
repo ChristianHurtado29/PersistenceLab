@@ -77,28 +77,24 @@
 				1346E8FA23D41B7E003F654B /* AppDelegate.swift */,
 				1346E8FC23D41B7E003F654B /* SceneDelegate.swift */,
 				13B037C223D6C4B100768AC6 /* Model */,
-				1346E91423D50C5A003F654B /* PicturesAPI.swift */,
-				1346E90E23D41C57003F654B /* Controllers */,
-				1346E90023D41B7E003F654B /* Main.storyboard */,
-				134294D823D6C8B4006A0B5B /* FileManager+Extensions.swift */,
-				134294DA23D6C8DC006A0B5B /* PersistenceHelper.swift */,
-				1346E90323D41B81003F654B /* Assets.xcassets */,
-				1346E90523D41B81003F654B /* LaunchScreen.storyboard */,
+				13E8D4E623D749F5008C15C2 /* APIClient */,
+				1346E90E23D41C57003F654B /* Controllers+Cells */,
+				13E8D4E723D74A07008C15C2 /* Helping Documents */,
 				1346E90823D41B81003F654B /* Info.plist */,
 			);
 			path = PersistenceLab;
 			sourceTree = "<group>";
 		};
-		1346E90E23D41C57003F654B /* Controllers */ = {
+		1346E90E23D41C57003F654B /* Controllers+Cells */ = {
 			isa = PBXGroup;
 			children = (
 				1346E8FE23D41B7E003F654B /* InitialScrollVC.swift */,
-				134294DC23D6D055006A0B5B /* FavoritedVC.swift */,
 				13B037C023D6B28300768AC6 /* DetailedVC.swift */,
+				134294DC23D6D055006A0B5B /* FavoritedVC.swift */,
 				1369383223D685FD0025F73E /* PicturesCVC.swift */,
 				134294DE23D6DADE006A0B5B /* FavesCell.swift */,
 			);
-			path = Controllers;
+			path = "Controllers+Cells";
 			sourceTree = "<group>";
 		};
 		13B037C223D6C4B100768AC6 /* Model */ = {
@@ -107,6 +103,26 @@
 				1346E90F23D50670003F654B /* Pictures.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		13E8D4E623D749F5008C15C2 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				1346E91423D50C5A003F654B /* PicturesAPI.swift */,
+			);
+			path = APIClient;
+			sourceTree = "<group>";
+		};
+		13E8D4E723D74A07008C15C2 /* Helping Documents */ = {
+			isa = PBXGroup;
+			children = (
+				1346E90023D41B7E003F654B /* Main.storyboard */,
+				134294D823D6C8B4006A0B5B /* FileManager+Extensions.swift */,
+				134294DA23D6C8DC006A0B5B /* PersistenceHelper.swift */,
+				1346E90323D41B81003F654B /* Assets.xcassets */,
+				1346E90523D41B81003F654B /* LaunchScreen.storyboard */,
+			);
+			path = "Helping Documents";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

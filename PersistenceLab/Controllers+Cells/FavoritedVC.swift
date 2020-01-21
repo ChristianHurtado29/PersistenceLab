@@ -12,7 +12,13 @@ class FavoritedVC: UIViewController {
     
     @IBOutlet weak var favTableView: UITableView!
     
-    var faves = [Pictures?]()
+    var faves = [Pictures?](){
+        didSet{
+            DispatchQueue.main.async {
+                self.favTableView.reloadData()
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
