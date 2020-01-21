@@ -51,6 +51,7 @@ class DetailedVC: UIViewController {
         
         do{
             try PersistenceHelper.save(photo: currentPhoto)
+            print("photo saved!!!!")
         } catch {
             print("Error saving photo with error \(error)")
         }
