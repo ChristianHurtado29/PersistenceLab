@@ -22,9 +22,14 @@ class DetailedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userLabel.text = "User: \(photo?.user ?? "no user")"
-        viewsLabel.text = "Views: \(photo?.views.description ?? "500")"
-        likesLabel.text = "Likes: \(photo?.likes.description ?? "500")"
-        downloadsLabel.text = "Downloads: \(photo?.downloads.description ?? "500")"
+        userLabel.textColor = .systemPink
+        userLabel.backgroundColor = .gray
+        viewsLabel.text = "Total Views: \(photo?.views.description ?? "500")"
+        viewsLabel.backgroundColor = .gray
+        likesLabel.text = "Total Likes: \(photo?.likes.description ?? "500")"
+        likesLabel.backgroundColor = .gray
+        downloadsLabel.text = "Total Downloads: \(photo?.downloads.description ?? "500")"
+        downloadsLabel.backgroundColor = .gray
         
         pictureView.getImage(with: photo!.largeImageURL) { (result) in
             switch result {
@@ -41,6 +46,12 @@ class DetailedVC: UIViewController {
     }
     
     @IBAction func favoritesButton(_ sender: UIBarButtonItem) {
+        
+        guard let favored = photo else{
+            return
+        }
+        let currentPhoto = Pictures(largeImageURL: photo!.largeImageURL, likes: photo!.likes, views: photo!.views, comments: photo?.comments, downloads: photo!.downloads, user: photo!.user, previewURL: photo!.previewURL)
+        
     }
     
 
